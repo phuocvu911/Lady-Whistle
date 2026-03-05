@@ -1,0 +1,3 @@
+module predictive-app
+
+go 1.25.7
