@@ -14,10 +14,10 @@ func main() {
 	}
 	ticker = strings.TrimSpace(ticker)
 
-	lookbackDays := 180 // ~6 months of history
+	lookbackDays := 180 // ~6 months of history, can be changed
 	forecastDays := 7
 
-	// ── Fetch ────────────────────────────────
+	// Fetch
 	PrintHeader(fmt.Sprintf("Stock Predictor Agent  ·  %s", ticker))
 	fmt.Printf("  Fetching %d days of historical data …\n", lookbackDays)
 
@@ -39,7 +39,7 @@ func main() {
 		prices[i] = d.Close
 	}
 
-	// ── Market summary ───────────────────────
+	// Market summary 
 	latest := data[len(data)-1]
 	PrintHeader("Market Summary")
 	fmt.Printf("  Latest close : $%.2f  (%s)\n", latest.Close, latest.Date.Format("2006-01-02"))
@@ -49,7 +49,7 @@ func main() {
 	fmt.Printf("  SMA-50       : $%.2f\n", SimpleMovingAverage(prices, 50))
 	fmt.Printf("  Volatility   : $%.2f  (20-day std dev)\n", Volatility(prices, 20))
 
-	// ── Train ────────────────────────────────
+	// Train
 	PrintHeader("Model Training")
 	model := Train(prices)
 	fmt.Printf("  Model        : Linear Regression (OLS)\n")
@@ -61,7 +61,7 @@ func main() {
 		fmt.Println("  ⚠  Low R² – the trend is weak; predictions may be unreliable.")
 	}
 
-	// ── Predict ──────────────────────────────
+	// Predict 
 	PrintHeader(fmt.Sprintf("7-Day Price Forecast for %s", ticker))
 	fmt.Printf("  %-12s  %-12s  %-10s\n", "Date", "Predicted", "Change")
 	PrintDivider()
@@ -87,7 +87,7 @@ func main() {
 			currentDate.Format("2006-01-02"), pred, arrow, change, pct)
 	}
 
-	// ── Confidence note ──────────────────────
+	// Confidence note 
 	PrintDivider()
 	vol := Volatility(prices, 20)
 	fmt.Printf("\n  Confidence band (±1σ): $%.2f – $%.2f\n",
