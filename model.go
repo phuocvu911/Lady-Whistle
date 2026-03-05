@@ -7,7 +7,7 @@ type LinearModel struct {
 	RSquared  float64
 }
 
-// Train fits a least-squares linear regression on the data.
+// Train fits a least-squares linear regression on the data. 
 // x = day index (0, 1, 2, …), y = closing price.
 func Train(prices []float64) LinearModel {
 	n := float64(len(prices))
