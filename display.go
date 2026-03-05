@@ -5,7 +5,6 @@ import (
 	"strings"
 )
 
-
 // PrintHeader prints a double-line bordered section header.
 func PrintHeader(title string) {
 	line := strings.Repeat("═", 60)
