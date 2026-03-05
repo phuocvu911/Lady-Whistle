@@ -18,7 +18,7 @@ func main() {
 	forecastDays := 7
 
 	// Fetch
-	PrintHeader(fmt.Sprintf("Stock Predictor Agent  ·  %s", ticker))
+	PrintHeader(fmt.Sprintf("Lady Whistle  ·  %s", ticker))
 	fmt.Printf("  Fetching %d days of historical data …\n", lookbackDays)
 
 	data, err := FetchStockData(ticker, lookbackDays)

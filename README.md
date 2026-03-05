@@ -1,4 +1,4 @@
-# 📈 Stock Predictor Agent
+# 💃 Lady Whistle - Stock Predictor Agent 📈
 
 A lightweight CLI tool written in **Go** that fetches real stock market data from Yahoo Finance, trains a simple linear regression model, and predicts the closing price for the next 7 trading days.
 
@@ -21,7 +21,7 @@ A lightweight CLI tool written in **Go** that fetches real stock market data fro
 ## Project Structure
 
 ```
-predictive-app/
+Lady-Whistle/
 ├── main.go        # Entry point – CLI args, orchestration, output
 ├── yahoo.go       # Yahoo Finance API types and data fetching
 ├── model.go       # Linear regression training and prediction
@@ -68,7 +68,7 @@ go build -o predict
 
 ```
 ════════════════════════════════════════════════════════════
-  Stock Predictor Agent  ·  TSLA
+  Lady Whistle   ·  TSLA
 ════════════════════════════════════════════════════════════
   Fetching 180 days of historical data …
   ✓ Received 124 trading days of data
