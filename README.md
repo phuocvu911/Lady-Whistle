@@ -45,14 +45,11 @@ predictive-app/
 
 ### Prerequisites
 
-- [Go 1.21+](https://go.dev/dl/) installed
 - Internet connection (for Yahoo Finance API)
 
 ### Build & Run
 
 ```bash
-# Clone or navigate to the project directory
-cd "Predictive app"
 
 # Build the binary
 go build -o predict
