@@ -17,7 +17,7 @@ func main() {
 	lookbackDays := 180 // ~6 months of history, can be changed
 	forecastDays := 7
 
-	// Fetch
+	// Fetch data
 	PrintHeader(fmt.Sprintf("Lady Whistle  ·  %s", ticker))
 	fmt.Printf("  Fetching %d days of historical data …\n", lookbackDays)
 
