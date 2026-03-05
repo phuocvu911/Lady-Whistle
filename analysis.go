@@ -2,8 +2,6 @@ package main
 
 import "math"
 
-
-
 // SimpleMovingAverage returns the SMA of the last `window` closing prices.
 func SimpleMovingAverage(prices []float64, window int) float64 {
 	if len(prices) < window {
