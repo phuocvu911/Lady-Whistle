@@ -9,10 +9,6 @@ import (
 	"time"
 )
 
-// ─────────────────────────────────────────────
-// Yahoo Finance API response structures
-// ─────────────────────────────────────────────
-
 // YahooResponse maps the JSON returned by Yahoo Finance's chart API.
 type YahooResponse struct {
 	Chart struct {
