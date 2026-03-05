@@ -42,7 +42,7 @@ func main() {
 	// Market summary 
 	latest := data[len(data)-1]
 	PrintHeader("Market Summary")
-	fmt.Printf("  Latest close : $%.2f  (%s)\n", latest.Close, latest.Date.Format("2006-01-02"))
+	fmt.Printf("  Latest close : $%.2f  (%s)\n", latest.Close, latest.Date.Format("02-01-2006"))
 	fmt.Printf("  Period high  : $%.2f\n", MaxPrice(prices))
 	fmt.Printf("  Period low   : $%.2f\n", MinPrice(prices))
 	fmt.Printf("  SMA-20       : $%.2f\n", SimpleMovingAverage(prices, 20))
@@ -84,7 +84,7 @@ func main() {
 			arrow = "▼"
 		}
 		fmt.Printf("  %-12s  $%-11.2f  %s %+.2f (%+.2f%%)\n",
-			currentDate.Format("2006-01-02"), pred, arrow, change, pct)
+			currentDate.Format("02-01-2006"), pred, arrow, change, pct)
 	}
 
 	// Confidence note 
