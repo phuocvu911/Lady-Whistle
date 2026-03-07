@@ -13,7 +13,7 @@ import (
 type YahooResponse struct {
 	Chart struct {
 		Result []struct {
-			Timestamp  []int64 `json:"timestamp"`
+			Timestamp  []int64 `json:"timestamp"` //struct tag to tell the unmarshaler how to map JSON data to the struct field.
 			Indicators struct {
 				Quote []struct {
 					Close  []*float64 `json:"close"`
